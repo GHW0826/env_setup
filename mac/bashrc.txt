@@ -1,0 +1,15 @@
+
+export LS_OPTIONS='--color=auto'
+eval "`dircolors`"
+alias ls='ls $LS_OPTIONS' 
+
+alias vi='vim'
+alias x='exit'
+alias ll='ls -alF'
+alias la='ls -A'
+alias lh='ll -h'
+alias l='ls -CF'
+alias 1='cd -'
+alias g='git'
+alias grep='grep --color=auto --exclude=".svn" --exclude=cscope.out --exclude=tags --exclude=*.o --exclude=*.d --exclude=*.swp -n'
+

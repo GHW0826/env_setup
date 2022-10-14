@@ -1,0 +1,76 @@
+" {{ for YouCompleteMe
+set nocompatible              " be iMproved, required
+filetype off                  " required
+"
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your
+Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo
+" Pass the path to set the runtimepath properly.
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Install L9 and avoid a Naming conflict if you've already
+" different version somewhere else.
+" Plugin 'ascenator/L9', {'name': 'newL9'}
+
+" All of your Plugins must be added before the following
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+let g:ycm_show_diagnostics_ui = 0 " diagnostics off
+let g:ycm_add_preview_to_completeopt = 0
+
+" line number
+set nu
+
+set completeopt-=preview
+set autoindent
+set smartindent
+set softtabstop=2
+set tabstop=2
+set tabpagemax=20
+set shiftwidth=2
+set expandtab
+set number
+set hlsearch
+set ls=2
+set ruler
+set statusline=%<%F%h%m%r%h%w%y\ %{strftime(\"%Y/%m/%d-%H:%M\")}%=\ col:%c%V\ ascii:%b\ pos:%o\ lin:%l\,%L\ %P
+set cindent
+set sm
+set incsearch " 점진 검색(키 입력 시마다 검색됨)
+colorscheme koehler
+"colorscheme delek
+"colorscheme desert
+"colorscheme ron
+
+let NERDTreeHighlightCursorline=0
+
+syntax on
+
+
+
+
+
+
