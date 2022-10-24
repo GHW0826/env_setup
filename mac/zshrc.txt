@@ -43,3 +43,6 @@ else
   builtin cd ../../.. && cd $*
 fi
 }
+
+_shnew() { touch "$1" && chmod +x "$1"; }
+alias shew='_shnew'

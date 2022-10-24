@@ -13,3 +13,30 @@ alias 1='cd -'
 alias g='git'
 alias grep='grep --color=auto --exclude=".svn" --exclude=cscope.out --exclude=tags --exclude=*.o --exclude=*.d --exclude=*.swp -n'
 
+# cd and ls
+function cd { builtin cd $* && ls; }
+
+function .. {
+if [ $# -eq 0 ]; then
+  cd ..
+else
+  builtin cd .. && cd $*
+fi
+}
+function ... {
+if [ $# -eq 0 ]; then
+  cd ../..
+else
+  builtin cd ../.. && cd $*
+fi
+}
+function .... {
+if [ $# -eq 0 ]; then
+  cd ../../..
+else
+  builtin cd ../../.. && cd $*
+fi
+}
+
+_shnew() { touch "$1" && chmod +x "$1"; }
+alias shew='_shnew'
